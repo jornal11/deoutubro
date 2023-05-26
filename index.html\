@@ -37,7 +37,7 @@
         <nav class="l-side-nav">
           <ul class="side-nav">
             <li class="is-active"><span>inicio</span></li>
-            <li><span>noticias</span></li>
+            <li><span>trabalhos</span></li>
             <li><span>sobre</span></li>
             <li><span>contatos</span></li>
           </ul>
@@ -159,13 +159,13 @@
                 <div class="modal">
                   <div class="modal--information">
                     <p>contatos da secretaria.</p>
-                    <a href="mailto:ouremail@gmail.com">numero</a>
-                    <a href="tel:+148126287560">seu @escola.pr.gov.br</a>
+                    <a href="">(43) 3251-3228 ou (43) 3253-1692</a>
+                    <a href="https://classroom.google.com/">seu @escola.pr.gov.br</a>
                   </div>
                   <ul class="modal--options">
                     <li><a href="https://redacao.pr.gov.br/login">redação parana</a></li>
                     <li><a href="https://professor.escoladigital.pr.gov.br/ingles_parana">ingles parana</a></li>
-                    <li><a href="">mais contatos</a></li>
+                    <li><a href="http://www.consultaescolas.pr.gov.br/consultaescolas-java/pages/templates/initial2.jsf?codigoMunicipio=370&codigoEstab=752">mais contatos</a></li>
                   </ul>
                 </div>
               </div>
