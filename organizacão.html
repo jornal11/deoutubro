@@ -7,14 +7,17 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
+            --cor-destaque: #00d9ff;
+            --cor-fundo-card: rgb(255, 253, 253);
+            --cor-sombra-card: rgb(0, 255, 255);
         }
 
         h1 {
-            color: #00d9ff;
+            color: var(--cor-destaque);
         }
 
         h2 {
-            color: #333;
+            color: #000000;
         }
 
         p {
@@ -31,18 +34,111 @@
             width: 300px;
             margin-bottom: 20px;
             padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgb(0, 255, 255);
+            background-color: var(--cor-fundo-card);
+            box-shadow: 0 2px 4px var(--cor-sombra-card);
         }
 
         .info-card img {
             width: 100%;
             margin-bottom: 10px;
+            padding: 20px;
+            background-color: black;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--cor-destaque);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #00a5d9;
+        }
+
+        .slider {
+            width: 600px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            margin: 20px auto;
+        }
+
+        .slides {
+            width: 300%;
+            height: 100%;
+            display: flex;
+        }
+
+        .slide {
+            width: 33.33%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider input[name="r"] {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .slider label {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .slider input[name="r"]:checked ~ .slides {
+            transform: translateX(-33.33%);
+        }
+
+        .slider input[name="r"]:checked ~ label:nth-child(2) {
+            background-color: var(--cor-destaque);
+        }
+
+        .slider input[name="r"]:checked ~ label:nth-child(3) {
+            background-color: var(--cor-destaque);
+        }
+
+        .slider input[name="r"]:checked ~ label:nth-child(4) {
+            background-color: var(--cor-destaque);
         }
     </style>
 </head>
 <body>
     <h1>Colégio 11 de Outubro em Cambé</h1>
+
+    <div class="slider">
+        <input type="radio" name="r" id="r1" checked>
+        <input type="radio" name="r" id="r2">
+        <input type="radio" name="r" id="r3">
+
+        <div class="slides">
+            <div class="slide">
+                
+          
+            </div>
+        </div>
+
+        <label for="r1"></label>
+        <label for="r2"></label>
+        <label for="r3"></label>
+    </div>
 
     <div class="container">
         <div class="info-card">
@@ -64,6 +160,30 @@
             <h2>Atividades Extracurriculares</h2>
             <p>Além das disciplinas curriculares, o colégio oferece uma variedade de atividades extracurriculares, como esportes, música, dança e eventos culturais, proporcionando um desenvolvimento integral dos estudantes.</p>
         </div>
+
+        <div class="info-card">
+            <h2>Melhores Formas de Estudos</h2>
+            <p>Para obter um melhor desempenho acadêmico, o Colégio 11 de Outubro recomenda algumas das melhores formas de estudos, incluindo:</p>
+            <ul>
+                <li>Organização do tempo e estabelecimento de metas de estudo;</li>
+                <li>Criação de um ambiente de estudo tranquilo e livre de distrações;</li>
+                <li>Utilização de técnicas de aprendizagem ativa, como resumos, mapas mentais e questionários;</li>
+                <li>Participação ativa em sala de aula, fazendo perguntas e buscando esclarecimentos;</li>
+                <li>Colaboração com colegas de classe em grupos de estudo;</li>
+                <li>Prática regular de revisões e exercícios;</li>
+                <li>Manutenção de uma alimentação saudável e de boas horas de sono.</li>
+            </ul>
+        </div>    
+        <div class="info-card">
+            <h2>Prova da OMAP e OBMEP</h2>
+            <p>O Colégio 11 de Outubro incentiva a participação dos alunos nas provas da OMAP (Olimpíada de Matemática da Associação de Pais e Mestres) e OBMEP (Olimpíada Brasileira de Matemática das Escolas Públicas), que ocorrem anualmente.</p>
+            <p>A prova da OMAP é realizada no mês de maio, e a prova da OBMEP ocorre no mês de setembro. Essas olimpíadas têm como objetivo estimular o estudo da matemática e desenvolver o raciocínio lógico dos estudantes.</p>
+            <p>Os resultados da OMAP são divulgados geralmente no mês de julho, enquanto os resultados da OBMEP são divulgados a partir do mês de dezembro, após a correção das provas e a análise dos resultados.</p>
+        </div>
+    </div>
+    <div class="container">
+        <a href="https://redacao.pr.gov.br/" class="btn">Redação Paraná</a>
+        <a href="https://professor.escoladigital.pr.gov.br/ingles_parana" class="btn">Inglês Paraná</a>
     </div>
 </body>
 </html>
