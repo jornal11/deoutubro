@@ -26,7 +26,8 @@
     }
 
     input[type="text"],
-    input[type="password"] {
+    input[type="password"],
+    textarea {
       width: 100%;
       padding: 10px;
       border: 1px solid #ccc;
@@ -65,6 +66,14 @@
       <div>
         <label for="password">Senha:</label>
         <input type="password" id="password" name="password" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" required></textarea>
       </div>
       <div>
         <input type="submit" value="Entrar">
