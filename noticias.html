@@ -1,22 +1,78 @@
 <!DOCTYPE html>
 <html>
- <body>
-  <title>noticias</title>
-  <h1>jornal 11 de outubro informa</h1>
-  <p>nao havera nada no momento</p>
-    <figure>
-  <img src="https://github.com/jornal11/deoutubro/blob/main/assets/img/images.jpeg?raw=true" alt="Minha Figura">
-  <figcaption>11 de outubro</figcaption>
-</figure>
-  <img class="fit-picture"
-     src="/home/alunos/Documentos/Nova pasta/css/imagem.png"
-     alt="Grapefruit slice atop a pile of other slices">
-   <form action="https://jornal11.github.io/deoutubro/" method="get">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <button type="submit">Submit</button>
-  <button type="submit" formaction="https://jornal11.github.io/deoutubro/">voltar</button>
-</form> 
- </body>
+<head>
+  <title>Formulário de Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 100px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .error {
+      color: red;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Formulário de Login</h2>
+    <form action="login.php" method="post">
+      <div>
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div>
+        <input type="submit" value="Entrar">
+      </div>
+    </form>
+    <div class="error">
+      <!-- Aqui você pode exibir mensagens de erro, se necessário -->
+    </div>
+  </div>
+</body>
+</html>
